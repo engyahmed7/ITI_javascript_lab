@@ -4,7 +4,7 @@ var lastName = prompt("Enter your last name");
 var fullName = firstName + " " + lastName;
 confirm("Your full name is " + fullName);
 var birthYear = prompt("Enter your birth year");
-var age = 2023 - birthYear;
+var age = 2023 - Number(birthYear);
 alert("Welcome " + fullName + " you are " + age + " years old");
 
 //question 2
