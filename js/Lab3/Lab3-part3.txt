@@ -66,3 +66,21 @@ The splice() method changes the contents of an array by removing or replacing ex
 The forEach() method executes a provided function once for each array element.
 
 
+Question 3)
+
+function outerFunction(outerParam) {
+    // Outer function scope
+    console.log(`Outer parameter: ${outerParam}`);
+    function innerFunction(innerParam) {
+        // Inner function scope
+        console.log(`Inner parameter: ${innerParam}`);
+        console.log(`Outer parameter within inner function: ${outerParam}`);
+    }
+    // Returning the inner function from the outer function
+    return innerFunction;
+}
+
+// Creating an instance of outerFunction with parameter 10
+const closureExample = outerFunction(10);
+// Invoking the inner function with parameter 5
+closureExample(5);
