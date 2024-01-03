@@ -1,0 +1,68 @@
+Question 1) Use 10 of Objects predefined methods and explain them
+
+1- Object.keys()
+The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
+
+2- Object.values()
+The Object.values() method returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop.
+
+3- Object.entries()
+The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop. (The only important difference is that a for...in loop enumerates properties in the prototype chain as well).
+
+4- Object.assign()
+The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
+
+5- Object.create()
+The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+
+6- Object.defineProperty()
+The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+
+7- Object.hasOwnProperty()
+The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+
+8- Object.freeze()
+The Object.freeze() method freezes an object. preventing new properties from being added and existing properties from being removed or modified
+
+9- Object.is()
+The Object.is() method determines whether two values are the same value.
+
+10- Object.seal()
+The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. 
+Values of present properties can still be changed as long as they are writable.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2) Use 10 of Arrays predefined methods and explain them.
+
+1- push()
+The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+2- pop()
+The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+
+3- shift()
+The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+
+4- unshift()
+The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+5- indexOf()
+The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+6- lastIndexOf()
+The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+
+7- includes()
+The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+8- slice()
+The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
+
+9- splice()
+The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+10- forEach()
+The forEach() method executes a provided function once for each array element.
+
+
