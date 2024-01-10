@@ -160,11 +160,11 @@ Enter your data:`);
   const employee = new Employee(
     name,
     100,
-    "", 
-    0,  
+    "", // sleepMood placeholder
+    0, // healthRate placeholder
     id,
     email,
-    "",
+    "", // workMood placeholder
     salary,
     action.toLowerCase() === "mngr"
   );
@@ -189,12 +189,11 @@ const empId = prompt("Enter employee id to get his/her data:");
 const employeeData = office.getEmployee(parseInt(empId));
 console.log(employeeData);
 
-const fire= prompt("Do you want to fire employee? (y/n)");
-if(fire === "y"){
+const fire = prompt("Do you want to fire employee? (y/n)");
+if (fire === "y") {
   const empIdToFire = prompt("Enter employee id to fire:");
   office.fire(parseInt(empIdToFire));
   console.log(office.getAllEmployees());
-}
-else{
+} else {
   alert("Thank you");
 }
