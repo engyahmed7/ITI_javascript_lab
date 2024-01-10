@@ -7,7 +7,7 @@ class Person {
   }
 
   sleep(hours) {
-    if (hours === 7) {
+    if (hours == 7) {
       this.sleepMood = "happy";
     } else if (hours < 7) {
       this.sleepMood = "tired";
@@ -17,17 +17,17 @@ class Person {
   }
 
   eat(meals) {
-    if (meals === 3) {
+    if (meals == 3) {
       this.healthRate = 100;
-    } else if (meals === 2) {
+    } else if (meals == 2) {
       this.healthRate = 75;
     } else {
       this.healthRate = 50;
     }
   }
 
-  buy(items) {
-    if (items === 1) {
+  buy(item) {
+    if (item == 1) {
       this.money -= 10;
     }
   }
@@ -35,50 +35,58 @@ class Person {
 
 class Employee extends Person {
   #salary;
+  static counter=1;
 
   constructor(
     fullName,
     money,
     sleepMood,
     healthRate,
-    id,
     email,
     workMood,
     salary,
     isManager
   ) {
     super(fullName, money, sleepMood, healthRate);
-    this.id = id;
+    this.id = Employee.counter++;
     this.email = email;
     this.workMood = workMood;
-    this.#salary = salary >= 1000 ? salary : 1000;
+    this.#salary = salary;
     this.isManager = isManager;
   }
 
   work(hours) {
     if (hours == 8) {
       this.workMood = "happy";
-    } else if (hours > 8) {
+    } else if (hours < 8) {
       this.workMood = "tired";
     } else {
       this.workMood = "lazy";
     }
   }
 
-  getWorkMood() {
-    return this.workMood;
-  }
-
-  setHealthRate(healthRate) {
-    this.healthRate = healthRate >= 0 && healthRate <= 100 ? healthRate : 0;
-  }
-
-  getHealthRate() {
-    return this.healthRate;
+  setSalary(salaryVal) {
+    if (salaryVal >= 1000) {
+      this.#salary = salaryVal;
+    } else {
+      this.#salary = 1000;
+    }
   }
 
   getSalary() {
     return this.#salary;
+  }
+
+  setHealthRate(healthRateVal) {
+    if (healthRateVal >= 0 && healthRateVal <= 100) {
+      this.healthRate = healthRateVal;
+    } else {
+      this.healthRate = 0;
+    }
+  }
+
+  getHealthRate() {
+    return this.healthRate;
   }
 }
 
@@ -125,7 +133,7 @@ class Office {
   }
 
   fire(empId) {
-    this.employees = this.employees.filter((emp) => emp.id !== empId);
+    return this.employees.filter((emp) => emp.id !== empId);
   }
 }
 
@@ -135,12 +143,12 @@ let employeeIdCounter = 1;
 
 while (true) {
   const action = prompt(`
-Menu:
-- For adding new employee enter "add"
-- If manager press "mngr"
-- If normal employee press "nrml"
-- To quit the application enter "q"
-Enter your data:`);
+    Menu:
+    - For adding new employee enter "add"
+    - If manager press "mngr"
+    - If normal employee press "nrml"
+    - To quit the application enter "q"
+    Enter your data:`);
 
   if (action === null) {
     break;
@@ -152,17 +160,16 @@ Enter your data:`);
 
   const name = prompt("Enter Name:");
   const email = prompt("Enter Email:");
-  const id = employeeIdCounter++;
+  let money=prompt("Enter money:");
   let salary = prompt("Enter Salary:");
-  salary = salary < 1000 ? salary : 1000;
+  salary >= 1000 ? salary : salary=1000;
 
   let workM = prompt("Enter no. of hours of work:");
   const employee = new Employee(
     name,
-    100,
+    money,
     "", // sleepMood placeholder
     0, // healthRate placeholder
-    id,
     email,
     "", // workMood placeholder
     salary,
