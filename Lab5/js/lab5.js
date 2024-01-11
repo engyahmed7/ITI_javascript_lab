@@ -133,7 +133,7 @@ class Office {
   }
 
   fire(empId) {
-    return this.employees.filter((emp) => emp.id !== empId);
+    this.employees = this.employees.filter((emp) => emp.id !== empId);
   }
 }
 
@@ -204,3 +204,5 @@ if (fire === "y") {
 } else {
   alert("Thank you");
 }
+
+// console.log(office.getAllEmployees());
