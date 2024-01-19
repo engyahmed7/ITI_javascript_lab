@@ -8,6 +8,10 @@ addBtn.addEventListener("click", function(){
   createdList.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
 
   var input= todoInput.value;
+  if(input === ""){
+    alert("Please enter a task");
+    return;
+  }
   // createdList.appendChild(document.createTextNode(input));
   createdList.innerText = input;
   todoInput.value = "";
