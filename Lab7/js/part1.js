@@ -4,8 +4,8 @@ var loginBtn = document.getElementById("loginBtn");
 
 var output = document.getElementById("output");
 
-loginBtn.addEventListener("click", function(){
-    event.preventDefault();
+loginBtn.addEventListener("click", function(e){
+    e.preventDefault();
     var login = {
         username: usernameInput.value,
         password: passwordInput.value
