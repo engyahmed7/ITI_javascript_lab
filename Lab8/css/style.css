@@ -1,0 +1,116 @@
+.landing {
+  position: relative;
+}
+
+.image {
+  position: relative;
+}
+
+#img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+#prev, #next {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+#prev {
+  margin-left: -40px;
+}
+
+#next {
+  margin-right: -40px;
+}
+
+
+
+/* part 2 */
+
+#digital-watch{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+
+  /* width: 100px !important; */
+}
+
+#alarm-input{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 100px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+}
+
+.alarm-bg{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#close{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 20px;
+  color: #000;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#setAlarmBtn{
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
