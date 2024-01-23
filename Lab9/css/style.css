@@ -1,0 +1,40 @@
+body{
+  background-color: #66bb6a !important;
+}
+
+#loginBtn{
+  background-color: #66bb6a !important;
+  border:none!important;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+}
+
+#input[type="text"], 
+#input[type="password"]{
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+}
+
+.inputTxt{
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  background-color: #eee!important;
+  border: none!important;
+}
+
+.span-color{
+  color: #b0bec5;
+  font-size: 10px;
+}
+.span-color2{
+  color: #43a047;
+}
